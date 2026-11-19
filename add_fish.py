@@ -78,9 +78,9 @@ def main() -> None:
             continue
 
         if mid in existing:
-            skipped.append((raw, mid, "duplicate"))
+            skipped.append((raw, mid, "exist duplicate"))
         elif mid in seen_in_batch:
-            skipped.append((raw, mid, "duplicate"))
+            skipped.append((raw, mid, "batch duplicate"))
         else:
             seen_in_batch.add(mid)
             added.append((raw, mid))
